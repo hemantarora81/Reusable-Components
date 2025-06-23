@@ -1,12 +1,26 @@
-# React + Vite
+# 🧩 React Reusable Components Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of modern, TypeScript-based, reusable UI components built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## ✨ Components Included
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ `ToggleComponent` – Custom toggle switch
+- 🌗 `ThemeToggle` – Dark mode / Light mode switch
+- ☑️ `CheckBoxComponent` – Styled checkbox
+- 🧃 `MultiSelectComponent` – Custom multi-select dropdown
+- ⬇️ `DropdownComponent` – Single select dropdown
+- ✍️ `TextArea` – Styled multiline input
+- 🔤 `TextBox` – Input field with optional floating label
+- 🧱 `GridComponent` – Virtualized, sortable, filterable grid with resizing & reordering
 
-## Expanding the ESLint configuration
+All components are:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ Built in **React**
+- ⛑️ Written in **TypeScript**
+- 🎨 Styled with **Tailwind CSS**
+- ♻️ Designed to be **reusable** and **composable**
+
+## 📦 Installation
+
+```bash
+npm install my-reusable-components
