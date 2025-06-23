@@ -1,0 +1,58 @@
+.select-all-option,
+.options-list-multidropdown,
+.custom-multi-dropdown-options {
+  font-size: 14px;
+}
+
+.select-all-option {
+  padding: 4px 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select-all-option input[type="checkbox"] {
+  margin-right: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.options-list-multidropdown {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.options-list-multidropdown .option-multidropdown {
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(239, 239, 239, 0.8);
+}
+
+.options-list-multidropdown .option-multidropdown input[type="checkbox"] {
+  margin-right: 8px;
+  width: 14px;
+  height: 14px;
+}
+
+.options-list-multidropdown .option-multidropdown.selected-value {
+  background-color: #456277;
+  color: #fff;
+}
+
+.options-list-multidropdown .no-options {
+  padding: 8px;
+  color: #999;
+  text-align: center;
+}
+
+.custom-multi-dropdown-options {
+  background-color: #fff;
+}
+
+.dark .custom-multi-dropdown-options {
+  background-color: #1f2937; /* Tailwind's dark:bg-gray-800 */
+}
