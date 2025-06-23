@@ -244,23 +244,23 @@ const DropdownComponent = forwardRef<HTMLSelectElement, FloatingDropdownProps>(
               </div>
             )}
 
-            {filteredOptions.length > 0 ? (
-              filteredOptions.map((opt, index) => (
-                <div
-                  key={opt.value}
-                  className={`px-4 py-2 text-sm cursor-pointer transition-colors duration-150 rounded mx-2 mb-1 truncate ${
-                    value === opt.value
-                      ? "bg-blue-100 dark:bg-gray-700 font-semibold"
-                      : "hover:bg-blue-50 dark:hover:bg-gray-100 dark:hover:text-gray-700"
-                  } ${index === focusedIndex ? "bg-blue-200" : "text-white"}`}
-                  onClick={() => handleChange(opt.value)}
-                >
-                  {opt.text}
-                </div>
-              ))
-            ) : (
-              <div className="px-4 py-2 text-sm text-gray-500">No options found</div>
-            )}
+          {filteredOptions.length > 0 ? (
+  filteredOptions.map((opt, index) => (
+    <div
+      key={opt.value}
+      className={`px-4 py-2 text-sm cursor-pointer transition-colors duration-150 rounded mx-2 mb-1 truncate ${
+        value === opt.value
+          ? "bg-blue-100 dark:bg-gray-700 font-semibold text-gray-800 dark:text-white"
+          : "hover:bg-blue-50 dark:hover:bg-gray-100 text-gray-700 dark:hover:text-gray-700"
+      } ${index === focusedIndex ? "bg-blue-200 text-gray-800" : ""}`}
+      onClick={() => handleChange(opt.value)}
+    >
+      {opt.text}
+    </div>
+  ))
+) : (
+  <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">No options found</div>
+)}
           </div>
         )}
 
