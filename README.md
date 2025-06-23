@@ -23,4 +23,4 @@ All components are:
 ## 📦 Installation
 
 ```bash
-npm install my-reusable-components
+npm install reusable-ui-kit
