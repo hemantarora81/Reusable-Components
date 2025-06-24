@@ -78,9 +78,9 @@ const DefaultColumnFilter: React.FC<DefaultColumnFilterProps & { darkMode?: bool
   }, [isOpen]);
 
   return (
-  <div className={`default-column-filter ${darkMode ? 'dark' : ''}`} ref={dropdownRef}>
+  <div className={`default-column-filter filter-container ${darkMode ? 'dark' : ''}`} ref={dropdownRef}>
       <button
-        className={`filter-button ${filterValue?.length ? 'active' : ''} ${
+        className={`filter-button ${filterValue?.length ? 'active active-filter' : ''} ${
           darkMode ? 'text-blue-400 hover:bg-gray-700' : 'text-blue-500 hover:bg-gray-200'
         }`}
         onClick={handleToggle}
@@ -100,14 +100,14 @@ const DefaultColumnFilter: React.FC<DefaultColumnFilterProps & { darkMode?: bool
           </div>
 
           <div className="filter-controls">
-            <div className="search-box">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
+               <div className="search-box">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
 
             <div className="sort-controls">
               <button
@@ -125,7 +125,7 @@ const DefaultColumnFilter: React.FC<DefaultColumnFilterProps & { darkMode?: bool
             </div>
           </div>
 
-          <div className="filter-options">
+          <div className="filter-options filter-options-container">
             <div className="select-all option-item">
               <label>
                 <input
