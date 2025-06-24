@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DropdownComponent from "../commonComponents/DropdownComponent";
+import {DropdownComponent} from "..";
 
 const DropdownExample = () => {
   const [selected, setSelected] = useState("");
@@ -18,12 +18,9 @@ const DropdownExample = () => {
 
   return (
     <div className="w-full transition-colors duration-300">
-      {/* Label */}
-      <p className="text-gray-600 dark:text-gray-300 mb-2">
+      <p className="mb-2 text-gray-600 dark:text-gray-300">
         🧺 Select Your Favorite Fruit
       </p>
-
-      {/* Dropdown */}
       <DropdownComponent
         options={options}
         value={selected}
@@ -35,8 +32,6 @@ const DropdownExample = () => {
         popupWidth="100%"
         popHeight="200px"
       />
-
-      {/* Selected Value */}
       <div className="mt-4 text-sm text-gray-700 dark:text-gray-300">
         <strong>Selected:</strong> {selected || "None"}
       </div>

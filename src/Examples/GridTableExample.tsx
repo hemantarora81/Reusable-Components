@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import GridTableComponent, { Column } from '../commonComponents/GridComponent';
+import { Column } from '../commonComponents/GridComponent';
+import { GridComponent} from '..';
 
 interface Employee {
   id: number;
@@ -130,7 +131,7 @@ const GridTableExample = () => {
         </div>
 
         <div className="overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-          <GridTableComponent<Employee>
+          <GridComponent<Employee>
             data={employees}
             columns={columns}
             darkMode={darkMode}

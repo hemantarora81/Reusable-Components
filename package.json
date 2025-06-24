@@ -1,6 +1,6 @@
 {
   "name": "reusable-ui-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable React + Tailwind component library including Grid, Toggle, CheckBox, Dropdown, and more.",
   "files": [
     "dist"

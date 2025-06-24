@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ToggleButtonComponent from "../commonComponents/ToggleComponent";
+import {ToggleComponent} from "..";
 
 const ToggleExample: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -10,7 +10,7 @@ const ToggleExample: React.FC = () => {
 
   return (
     <div className="p-4">
-      <ToggleButtonComponent
+      <ToggleComponent
         isOn={darkMode}
         onToggle={setDarkMode}
         labelLeft="🌞"

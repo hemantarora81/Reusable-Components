@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextBoxComponent from "../commonComponents/TextBoxComponent";
+import {TextBoxComponent} from "..";
 
 const TextBoxExample = () => {
 

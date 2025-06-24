@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MultiSelectDropdown from "../commonComponents/MultiSelectComponent";
+import {MultiSelectComponent} from "..";
 
 const MultiSelectExample: React.FC = () => {
   const [selectedValue, setSelectedValue] = useState<string | string[]>("");
@@ -17,8 +17,8 @@ const MultiSelectExample: React.FC = () => {
 
   return (
       <div className="w-full">
-  <p className="text-gray-600 dark:text-gray-300 mb-2">Choose your fruits</p>
-        <MultiSelectDropdown
+  <p className="mb-2 text-gray-600 dark:text-gray-300">Choose your fruits</p>
+        <MultiSelectComponent
           name="fruits"
           value={selectedValue}
           onChange={handleChange}

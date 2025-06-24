@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextAreaComponent from "../commonComponents/TextAreaComponent";
+import {TextAreaComponent} from "..";
 
 const TextAreaExample = () => {
 

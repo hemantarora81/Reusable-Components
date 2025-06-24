@@ -26,28 +26,41 @@ const Examples = () => {
 
       <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
         <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
-          <h2 className="mb-3 text-lg font-semibold dark:text-white">MultiSelect Dropdown</h2>
+          <h2 className="mb-3 text-lg font-semibold dark:text-white">
+            MultiSelect Dropdown
+          </h2>
           <MultiSelectExample />
         </div>
 
         <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
-          <h2 className="mb-3 text-lg font-semibold dark:text-white"> Dropdown</h2>
+          <h2 className="mb-3 text-lg font-semibold dark:text-white">
+            {" "}
+            Dropdown
+          </h2>
           <DropdownExample />
-        </div> 
-         <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
-          <h2 className="mb-3 text-lg font-semibold dark:text-white">Floating TextArea</h2>
-          <TextAreaExample />
-        </div>  
-         <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
-          <h2 className="mb-3 text-lg font-semibold dark:text-white">Floating TextBox</h2>
-          <TextBoxExample />
-        </div>   
+        </div>
         <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
-          <h2 className="mb-3 text-lg font-semibold dark:text-white">Toggle Button</h2>
+          <h2 className="mb-3 text-lg font-semibold dark:text-white">
+            Floating TextArea
+          </h2>
+          <TextAreaExample />
+        </div>
+        <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
+          <h2 className="mb-3 text-lg font-semibold dark:text-white">
+            Floating TextBox
+          </h2>
+          <TextBoxExample />
+        </div>
+        <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
+          <h2 className="mb-3 text-lg font-semibold dark:text-white">
+            Toggle Button
+          </h2>
           <ToggleExample />
         </div>
         <div className="p-5 transition-colors bg-white rounded shadow-sm dark:bg-gray-800">
-          <h2 className="mb-3 text-lg font-semibold dark:text-white">CheckBox Component</h2>
+          <h2 className="mb-3 text-lg font-semibold dark:text-white">
+            CheckBox Component
+          </h2>
           <CheckboxExample />
         </div>
       </div>
