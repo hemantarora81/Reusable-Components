@@ -46,11 +46,11 @@ const TextAreaComponent: React.FC<TextAreaComponentProps> = ({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
-        placeholder="" // prevent built-in placeholder
+        placeholder=""
         readOnly={readOnly}
         disabled={isDisabled}
         rows={1}
-        className={`block w-full resize-none border rounded-md px-3 py-2 text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500 transition-all duration-200 ${className}`}
+        className={`fieldSizing block w-full border rounded-md px-3 py-2 text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500 transition-all duration-200 ${className}`}
         style={style}
       />
 

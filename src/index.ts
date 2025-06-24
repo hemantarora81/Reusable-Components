@@ -1,5 +1,3 @@
-// src/index.ts
-
 import ToggleComponent from "./commonComponents/ToggleComponent";
 import CheckBoxComponent from "./commonComponents/CheckBoxComponent";
 import DropdownComponent from "./commonComponents/DropdownComponent";
