@@ -1,6 +1,6 @@
 {
   "name": "reusable-ui-kit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Reusable React + Tailwind component library including Grid, Toggle, CheckBox, Dropdown, and more.",
   "files": [
     "dist"
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hemantarora81/hemant-ui-kit.git"
+    "url": "git+https://github.com/hemantarora81/Reusable-Components.git"
   },
   "author": "Hemant Arora",
   "license": "MIT",
