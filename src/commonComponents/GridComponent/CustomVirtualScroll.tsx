@@ -8,6 +8,7 @@ interface CustomVirtualScrollProps {
   overscanCount?: number;
   className?: string;
   containerStyle?: React.CSSProperties;
+  darkMode?: boolean;
 }
 
 const CustomVirtualScroll: React.FC<CustomVirtualScrollProps> = ({

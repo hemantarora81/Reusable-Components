@@ -1,18 +1,28 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { 
+  useState, 
+  useRef, 
+  useEffect, 
+  ForwardedRef, 
+  forwardRef, 
+  ReactElement,
+  RefAttributes
+} from 'react';
 
 interface CustomTooltipProps {
   content: React.ReactNode;
-  children: React.ReactElement;
+  children: ReactElement & RefAttributes<HTMLElement>;
   position?: 'top' | 'right' | 'bottom' | 'left';
   delay?: number;
+  darkMode?: boolean;
 }
 
-const CustomTooltip: React.FC<CustomTooltipProps> = ({
+const CustomTooltip = ({
   content,
   children,
   position = 'top',
-  delay = 300
-}) => {
+  delay = 300,
+  darkMode = false
+}: CustomTooltipProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [coords, setCoords] = useState({ top: 0, left: 0 });
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -70,19 +80,43 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({
     };
   }, []);
 
+  // Clone the child element with proper ref handling
+  const childWithProps = React.cloneElement(children, {
+    ref: (node: HTMLElement | null) => {
+      // Keep the original ref if it exists
+      if (typeof children.ref === 'function') {
+        children.ref(node);
+      } else if (children.ref) {
+        (children.ref as React.MutableRefObject<HTMLElement | null>).current = node;
+      }
+      // Set our ref
+      targetRef.current = node;
+    },
+    onMouseEnter: (e: React.MouseEvent) => {
+      children.props.onMouseEnter?.(e);
+      showTooltip();
+    },
+    onMouseLeave: (e: React.MouseEvent) => {
+      children.props.onMouseLeave?.(e);
+      hideTooltip();
+    },
+    onFocus: (e: React.FocusEvent) => {
+      children.props.onFocus?.(e);
+      showTooltip();
+    },
+    onBlur: (e: React.FocusEvent) => {
+      children.props.onBlur?.(e);
+      hideTooltip();
+    }
+  });
+
   return (
     <>
-      {React.cloneElement(children, {
-        ref: targetRef,
-        onMouseEnter: showTooltip,
-        onMouseLeave: hideTooltip,
-        onFocus: showTooltip,
-        onBlur: hideTooltip
-      })}
+      {childWithProps}
       {isVisible && (
         <div
           ref={tooltipRef}
-          className={`custom-tooltip tooltip-${position}`}
+          className={`custom-tooltip tooltip-${position} ${darkMode ? 'dark-mode' : ''}`}
           style={{
             position: 'absolute',
             top: `${coords.top}px`,

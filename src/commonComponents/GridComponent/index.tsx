@@ -126,7 +126,7 @@ const GridTableComponent = <D extends object = {}>(
     setTotalPages(Math.ceil(totalCount / initialPageSize));
   }, [initialPage, initialPageSize, totalCount]);
 
-  const handlePageSizeChange = (newSize: number) => {
+  const handlePageSizeChange = (newSize: any) => {
     const newPageSize = Number(newSize);
     setPageSize(newPageSize);
     setTotalPages(Math.ceil(totalCount / newPageSize));
@@ -169,7 +169,9 @@ const GridTableComponent = <D extends object = {}>(
     return pages;
   };
   const [columnWidths, setColumnWidths] = useState<Record<string, number>>({});
-  const [columnFilters, setColumnFilters] = useState<Record<string, any[]>>({});
+  // const [columnFilters, setColumnFilters] = useState<Record<string, any[]>>({});
+  // Change this at the top of your component where you define state
+const [columnFilters, setColumnFilters] = useState<Record<string, any[] | undefined>>({});
 const [sortConfig, setSortConfig] = useState<{ columnId: string; direction: SortDirection }>({ columnId: '', direction: null });
 
   // ==================== THEME CLASSES ====================
@@ -262,7 +264,6 @@ const [sortConfig, setSortConfig] = useState<{ columnId: string; direction: Sort
   // ==================== COLUMN REORDER ====================
  const {
     columnOrder,
-    setColumnOrder,
     draggedColumn,
     dropTarget,
     handleDragStart,
