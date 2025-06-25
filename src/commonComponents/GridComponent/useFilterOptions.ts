@@ -34,7 +34,7 @@ const useFilterOptions = ({
     const optionsMap = new Map();
     preFilteredRows.forEach(row => {
       // Handle both row.values[columnId] and direct row[columnId] access
-      const value = row.values ? row.values[columnId] : row[columnId];
+      const value = row?.values?.[columnId] ?? row?.[columnId]
       if (value !== undefined && value !== null && !optionsMap.has(value)) {
         optionsMap.set(value, value);
       }

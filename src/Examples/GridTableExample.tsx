@@ -64,7 +64,7 @@ const GridTableExample = () => {
       width: 80,
       textAlign: "center",
       sortable: true,
-      darkBgColor: "rgb(31 41 55)" // Custom dark mode background
+      darkBgColor: "rgb(31 41 55)" // Custom dark mode background,
     },
     {
       Header: "Name",
@@ -140,7 +140,7 @@ const GridTableExample = () => {
             resizable={true}
             filterable={true}
             sortable={true}
-            virtualized={true}
+            virtualized={false}
             virtualScrollHeight={600}
             rowClassName={(row, index) => 
               row.status === 'Terminated' ? 'line-through opacity-70' : ''
